@@ -1,0 +1,38 @@
+@mixin min-height($media) {
+  @media (min-height: $media) {
+    @content;
+  }
+}
+
+@mixin max-responsive($media) {
+  @media (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin min-responsive($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin range-responsive($media, $media2) {
+  @media (min-width: $media) and (max-width: $media2) {
+    @content;
+  }
+}
+
+
+@mixin button{
+  background: $black;
+  font-weight: bold;
+  color: $light-grey;
+  transition: background .3s, color .3s, box-shadow .3s;
+  border: none;
+  border-radius: 10px;
+  &:hover{
+      color: $black;
+      background-color: white;
+      box-shadow: 0 0 0 1px $black;
+  }
+}

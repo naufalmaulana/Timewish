@@ -1,0 +1,35 @@
+.cart {
+  min-height: 80vh;
+
+  &Card {
+    &Image {
+      img {
+        max-height: 250px;
+      }
+    }
+    &Delete {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      @include max-responsive($w-md){
+        top: 5px;
+        right: 5px;
+      }
+    }
+  }
+  &Summary {
+    border-radius: 12px;
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 2px solid $light-grey;
+      margin: 1em 0;
+      padding: 0;
+    }
+    &Checkout {
+      @include button;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+//BASE
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/addons";
+//BASE
+
+* {
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+//COMPONENTS
+@import "./components/navbarMobile";
+@import "./components/sidebar";
+@import "./components/form";
+//COMPONENTS
+
+//PAGE
+@import './pages/cms/dashboard'
+//PAGE
+

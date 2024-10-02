@@ -1,0 +1,13 @@
+.footer{
+    &Top{
+        border-bottom: 1px solid white;
+
+        &Content{
+            a{
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

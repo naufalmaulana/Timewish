@@ -1,0 +1,40 @@
+.main{
+    padding: 10px 30px;
+    // flex-grow: 1;
+    width: 80%;
+    @include max-responsive($w-sm){
+        width: 100%;
+    }
+
+    &Title{
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #070606;
+    }
+    &Subtitle{
+        font-size: 16px;
+        font-weight: 500;
+        color: #070606;
+    }
+    &Control{
+        &Pagination{
+            button{
+                background: #070606;
+                font-weight: bold;
+                color: #E7E7E7;
+                transition: background .3s, color .3s, box-shadow .3s;
+                &:hover{
+                    color: #070606;
+                    background-color: white;
+                    box-shadow: 0 0 0 1px #070606;
+                }
+            }
+        }
+    }
+    .table{
+        @include min-responsive($w-lg){
+            table-layout: fixed;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.detail {
+  &Description {
+    position: relative;
+
+    &.show {
+      .detailDescription {
+        &Content {
+          height: auto;
+          &::after {
+            display: none;
+          }
+        }
+        &Button {
+          position: unset;
+          margin: 25px auto 0;
+          display: block;
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    &Content {
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+      transition: height 0.4s ease;
+      &::after {
+        background: linear-gradient(180deg, hsla(0, 0%, 98%, 0), #fff 66.67%);
+        bottom: 0;
+        content: "";
+        height: 160px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+    &Button {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &Amount {
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    &Input {
+      border-radius: 10px;
+      opacity: 1;
+    }
+    &Button {
+      @include button;
+      &:hover {
+        border: 1px solid transparent;
+      }
+    }
+  }
+  &Cart {
+    @include button;
+    &:hover {
+      border: 1px solid transparent;
+    }
+    &:disabled {
+      background: $grey;
+      color: $light-grey;
+      border: 1px solid $grey;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.home {
+  &Hero {
+    &Item {
+      &Container {
+        transform: scale(0.9);
+        transition: 0.2s ease;
+        @include max-responsive($w-sm) {
+          transform: none;
+        }
+        &Image {
+          img {
+            height: 300px;
+          }
+        }
+      }
+    }
+    .slick-current {
+      .homeHeroItemContainer {
+        transform: scale(1);
+        @include max-responsive($w-sm) {
+          transform: none;
+        }
+      }
+    }
+  }
+  &List {
+    &Control {
+      &Filter {
+        select {
+          padding: 13px 15px;
+          border: 2px solid $black;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+      &Sort {
+        padding: 13px 15px;
+        border: 2px solid $black;
+        border-radius: 10px;
+        cursor: pointer;
+        background: $white;
+      }
+      &Pagination {
+        &Btn {
+          background-color: $black;
+          border: 2px solid $black;
+          color: $light-grey;
+          border-radius: 10px;
+          transition: background-color 0.3s, color 0.3s;
+          padding: 10px 15px;
+          &:hover {
+            color: $black;
+            background-color: $white;
+          }
+        }
+      }
+    }
+    &Card {
+      border-radius: 12px;
+      border: 1px solid $grey;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 400px;
+      width: 90%;
+      &:hover {
+        .homeListCard {
+          &Top {
+            &Image {
+              img {
+                scale: (1.1);
+              }
+            }
+          }
+          &Bottom {
+            &Button {
+              color: $black;
+              background-color: white;
+              box-shadow: 0 0 0 1px $black;
+            }
+          }
+        }
+      }
+
+      &Top {
+        &Image {
+          width: 200px;
+          overflow: hidden;
+          border-radius: 12px;
+          margin: auto;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: scale 0.3s;
+          }
+        }
+      }
+      &Bottom {
+        &Button {
+          @include button;
+        }
+      }
+    }
+    .nowatch{
+      @include min-responsive($w-md){
+        width: 500px;
+      }
+    }
+  }
+}

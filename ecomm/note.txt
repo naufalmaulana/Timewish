@@ -1,0 +1,4 @@
+Cloudinary Data
+Cloud Name: dogapzeyw
+Api Key: 272425257679192
+Api Secret: UkXsdteKiF9TksHuF_-jlYBfSp8
